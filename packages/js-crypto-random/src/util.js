@@ -1,7 +1,6 @@
 /**
  * util.js
  */
-
 export function getWebCryptoAll () {
   if (typeof window === 'undefined') return undefined;
   else {
