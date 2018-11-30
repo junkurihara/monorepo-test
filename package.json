@@ -3,6 +3,13 @@
   "private": true,
   "license": "true",
   "scripts": {
+    "build": "lerna run build",
+    "test": "lerna run test",
+    "test:bundle": "lerna run test:bundle",
+    "karma": "lerna run karma",
+    "karma:bundle": "lerna run karma:bundle",
+    "karma:window": "lerna run karma:window",
+    "html": "lerna run html",
     "merge-lcov": "mkdir -p ./coverage && ./node_modules/.bin/lcov-result-merger 'packages/*/coverage/*/lcov.info' ./coverage/merged-lcov.info"
   },
   "devDependencies": {
