@@ -14,6 +14,6 @@ Lerna Monorepo Testing
   2. then at the release branch, do whatever for the release
   3. finally on the release branch, execute `lerna version [patch|minor|...]` which pushes the tags related to updated individual packages to GitHub.
   4. To finishes the versioning merge th release branch and additionally tags for the single monorepo.
-  should we tie the version of git repo, specified in root package.json, with the 'main' packaged module version?
+  should we tie the version of git repo, specified in root package.json, with the 'main' packaged module version? // JSCUのタグバージョンは必ずアップデートされるのでそれを使って更新していくと良さそう。
 - check common devDependencies
 - (done) renovate can monorepo package.json!
