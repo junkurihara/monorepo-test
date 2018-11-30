@@ -3,6 +3,7 @@
   "private": true,
   "license": "true",
   "scripts": {
+    "flow:version": "lerna version --no-git-tags --no-push",
     "build": "lerna run build",
     "test": "lerna run test",
     "test:bundle": "lerna run test:bundle",
