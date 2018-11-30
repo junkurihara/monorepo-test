@@ -5,9 +5,9 @@
   "version": "0.16.3",
   "root_package": "packages/js-crypto-utils",
   "scripts": {
-    "flow:version": "lerna version --no-git-tag-version --no-push",
-    "echo": "bash scripts/version.sh",
-    "release:start": "./node_modules/.bin/can-npm-publish --vorbose && git flow release start v$npm_package_version",
+    "flow:version": "bash scripts/version.sh",
+    "echo": "node scripts/echo.js",
+    "release:start": "git flow release start v$npm_package_version",
     "release:finish": "git flow release finish v$npm_package_version",
     "release:push": "git push --all && git push origin v$npm_package_version",
     "build": "lerna run build",

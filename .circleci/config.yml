@@ -42,9 +42,13 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
 
       # run tests!
-      - run: lerna test
+      - run: yarn test
 
-      - run: lerna karma
+      - run: yarn karma
+
+      - run:
+          name: 'merge lcov'
+          command: yarn merge-lcov
 
       - store_artifacts:
           path: ./coverage
@@ -65,10 +69,10 @@ jobs:
         command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/repo/.npmrc
     - run:
         name: Build production module
-        command: npm run build
+        command: yarn build
     - run:
         name: Publish package
-        command: npm publish
+        command: lerna publish from-package
 
 
 workflows:
