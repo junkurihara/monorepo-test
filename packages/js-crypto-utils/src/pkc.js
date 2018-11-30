@@ -17,7 +17,6 @@ import params from './params.js';
  */
 export async function generateKey(keyType = 'EC', options = {}){
   const localOpt = cloneDeep(options);
-
   let kp;
   if (keyType === 'EC'){
     if(typeof localOpt.namedCurve === 'undefined') localOpt.namedCurve = 'P-256';
