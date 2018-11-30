@@ -29,7 +29,7 @@
     "babel-plugin-istanbul": "5.1.0",
     "babel-plugin-transform-remove-console": "6.9.4",
     "jsdom": "13.0.0",
-    "lcov-result-merger": "^3.1.0",
+    "lcov-result-merger": "3.1.0",
     "lerna": "3.5.1",
     "webpack-cli": "3.1.2",
     "webpack-common-shake": "2.1.0",
