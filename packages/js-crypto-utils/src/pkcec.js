@@ -19,9 +19,7 @@ export async function encrypt(
   // TODO: other iv-required algorithms
   switch (encrypt) {
   case 'AES-GCM': {
-    iv = (!iv)
-      ? await random.getRandomBytes(params.ciphers[encrypt].ivLength)
-      : iv;
+    iv = (!iv) ? await random.getRandomBytes(params.ciphers[encrypt].ivLength) : iv;
     break;
   }
   default:
@@ -29,7 +27,6 @@ export async function encrypt(
   }
 
   const data = await aes.encrypt(msg, sessionKeySalt.key, {name: encrypt, iv}); // no specification of tagLength and additionalData
-
   return {data, salt: sessionKeySalt.salt, iv};
 }
 

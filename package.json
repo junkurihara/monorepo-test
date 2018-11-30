@@ -1,7 +1,23 @@
 {
   "name": "monorepo-test",
   "private": true,
-  "license": "true",
+  "license": "MIT",
+  "version": "0.16.4",
+  "root_package": "packages/js-crypto-utils",
+  "scripts": {
+    "flow:version": "git checkout develop && bash scripts/version.sh",
+    "release:start": "git flow release start v$npm_package_version",
+    "release:finish": "git flow release finish v$npm_package_version",
+    "release:push": "git push --all && git push origin v$npm_package_version",
+    "build": "lerna run build",
+    "test": "lerna run test",
+    "test:bundle": "lerna run test:bundle",
+    "karma": "lerna run karma",
+    "karma:bundle": "lerna run karma:bundle",
+    "karma:window": "lerna run karma:window",
+    "html": "lerna run html",
+    "merge-lcov": "mkdir -p ./coverage && ./node_modules/.bin/lcov-result-merger 'packages/*/coverage/*/lcov.info' ./coverage/merged-lcov.info"
+  },
   "devDependencies": {
     "@babel/core": "7.1.6",
     "@babel/plugin-transform-runtime": "7.1.0",
@@ -13,6 +29,7 @@
     "babel-plugin-istanbul": "5.1.0",
     "babel-plugin-transform-remove-console": "6.9.4",
     "jsdom": "13.0.0",
+    "lcov-result-merger": "^3.1.0",
     "lerna": "3.5.1",
     "webpack-cli": "3.1.2",
     "webpack-common-shake": "2.1.0",
