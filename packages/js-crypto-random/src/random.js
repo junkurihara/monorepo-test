@@ -12,7 +12,6 @@ import * as util from './util.js';
 export function getRandomAsciiString(len) {
   const array = getRandomBytes(len);
   let finalString = '';
-
   // Ascii code excluding control characters are in 0x20 -- 0x7e
   for (let i = 0; i < len; i++) {
     array[i] = (array[i] % 0x5e) + 0x20;
