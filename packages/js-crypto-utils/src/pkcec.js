@@ -19,9 +19,7 @@ export async function encrypt(
   // TODO: other iv-required algorithms
   switch (encrypt) {
   case 'AES-GCM': {
-    iv = (!iv)
-      ? await random.getRandomBytes(params.ciphers[encrypt].ivLength)
-      : iv;
+    iv = (!iv) ? await random.getRandomBytes(params.ciphers[encrypt].ivLength) : iv;
     break;
   }
   default:
