@@ -27,7 +27,6 @@ export async function encrypt(
   }
 
   const data = await aes.encrypt(msg, sessionKeySalt.key, {name: encrypt, iv}); // no specification of tagLength and additionalData
-
   return {data, salt: sessionKeySalt.salt, iv};
 }
 
