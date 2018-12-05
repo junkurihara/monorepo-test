@@ -57,7 +57,7 @@
     "mocha": "5.2.0",
     "mocha-sinon": "2.1.0",
     "nyc": "13.1.0",
-    "webpack": "4.27.0"
+    "webpack": "4.27.1"
   },
   "dependencies": {
     "@babel/plugin-transform-regenerator": "^7.0.0",
