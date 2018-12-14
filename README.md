@@ -10,7 +10,7 @@ Lerna Monorepo Testing
 - check deployment strategy
   - deploy npm package only when tagged commit. the tag is associated only with the repo version.
   - does `lerna publish from-package` publish only the updated package even when the repo version: `version = xxx`.
-  - we should note that **only when the root package version increases, updated packages are deployed.**.
+  - we should note that **only when the root package version increases, updated packages are deployed.**
 - management policy for the git-flow + lerna in the release operation.
   1. first execute `yarn flow:release [patch|minor|major|...]` and bump versions of packages that have been modified on develop branch. this simultaneously update the repo version specified in root package.json. this commits nothing.
   2. commit changes and then execute `yarn release:start` to start release process on a release branch. here we note the release version will be the updated repo version.
